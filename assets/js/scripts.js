@@ -51,10 +51,12 @@ eliminarGasto = (items) =>{
         //Si el id de la fila corresponde al id del item, eliminamos este item de cada lista
         else if(laListaNombreItem[i].id === idItem){
 
+            //Eliminamos el elemento de cada fila
             laListaNombresContenedor.removeChild(laListaNombreItem[i]);
             laListaPreciosContenedor.removeChild(laListaPrecioItem[i]);
             laListaBorrarContenedor.removeChild(laListaBorrarItem[i]);
 
+            //Eliminamos el elemento de cada arreglo
             arregloNombre.splice(idItem -1, 1);
             arregloCantidad.splice(idItem -1, 1);
 
@@ -68,6 +70,7 @@ eliminarGasto = (items) =>{
             let elsaldo = parseInt(presupuestoIngresado) - parseInt(mostrarDatosAcumulados);
             saldoFinal.innerText = elsaldo;
 
+            //Si entra al if, le restara 1 al indice para modificar los id de los elementos siguientes al eliminado
             i--
 
         }
@@ -84,6 +87,7 @@ function enviarGasto(){
     let nombreIngresado = document.getElementById('nombreGasto').value;
     let valorGastoIngresado = document.getElementById('valorGasto').value;
     
+    //Se agregan los valores ingresados al arreglo con push
     arregloNombre.push(nombreIngresado);
     arregloCantidad.push(parseFloat(valorGastoIngresado));
 
@@ -103,10 +107,10 @@ function enviarGasto(){
     let laListaPrecios = document.getElementById('listaValor');
     let laListaBorrar = document.getElementById('listaBorrar');
 
-    //contar en que posiciomn de la lista queda cada gasto
+    //contar en que posicion de la lista queda cada gasto
     let nombreIdentificado = laListaBorrar.childElementCount
 
-    console.log(laListaNombres.childElementCount);
+    //console.log(laListaNombres.childElementCount);
 
     //Identificamos el contenedor de las listas
     let itemsGastosNombres = document.createElement('li');
