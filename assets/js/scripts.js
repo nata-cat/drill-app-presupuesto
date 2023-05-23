@@ -41,6 +41,7 @@ eliminarGasto = (items) =>{
     //Recorremos las listas con un ciclo for
     for(let i=1; i < laListaNombreItem.length; i++){
 
+        //Si el id es mayor al id del item eliminado, le restará 1 a cada id de los items restantes, asi no generaran conflicto después, este solo funciona despues del else if inferior.
         if(laListaNombreItem[i].id > idItem){
 
             laListaNombreItem[i].id -= 1;
@@ -65,6 +66,7 @@ eliminarGasto = (items) =>{
 
             document.getElementById('totalGasto').innerText = mostrarDatosAcumulados;
 
+            //Actualizamos el total del saldo
             let saldoFinal = document.getElementById('totalSaldo');
             let presupuestoIngresado = document.getElementById('totalPresupuesto').innerText;
             let elsaldo = parseInt(presupuestoIngresado) - parseInt(mostrarDatosAcumulados);
@@ -133,7 +135,7 @@ function enviarGasto(){
     //Se le agrega el texto que tendra cada fila de la lista 
     itemsGastosNombres.innerText = nombreIngresado;
     itemsGastosValores.innerText = valorGastoIngresado;
-    itemsBorrarGastos.innerText = 'X';
+    itemsBorrarGastos.innerHTML = `<i class="ri-delete-bin-line"></i>`;
 
     //Agregamos el li a al ul en html con appendChild
     laListaNombres.appendChild(itemsGastosNombres);
