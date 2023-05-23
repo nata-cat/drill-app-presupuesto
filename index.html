@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Bootstrap incorporarlo por manera local-->
+    <link href="assets/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body onload="asignarEventos()">
+
+    <nav id="barraNavegacion" class="navbar navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Presupuesto App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <h2>Calcula tu presupuesto</h2>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-5">
+                    <div id="fondoPresupuesto" class="row p-4">
+
+                        <label for="presupuestoIngresado" class="form-label text-dark">Ingresa tu presupuesto:</label>
+                        <input type="text" class="form-control" id="presupuestoIngresado" placeholder="100.000">
+
+                    </div>
+
+                    <div id="fondoGasto" class="row mt-3 p-4">
+                        <label for="nombreGasto" class="form-label text-dark">Ingrese un nombre para el gasto:</label>
+                        <input type="text" class="form-control" id="nombreGasto" placeholder="">
+
+                        <label for="valorGasto" class="form-label text-dark mt-3">Ingrese tu gasto:</label>
+                        <input type="text" class="form-control" id="valorGasto" placeholder="100.000">
+
+                        <button type="button" class="btn btn-secondary btn-sm mt-3" id="agregarGasto">Añadir Gasto</button>
+                    </div>
+                </div>
+                <div id="fondoResultado" class="col-md-6 ms-3 text-light">
+                    <div class="row p-4">
+                        <div class="col-md-4 ">
+                            <h6>Presupuesto</h6>
+                            <p id="totalPresupuesto">$0</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Gasto</h6>
+                            <p id="totalGasto">$0</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Saldo</h6>
+                            <p id="totalSaldo">$0</p>
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div  class="col-md-4">
+                            <ul id="listaNombre" class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent text-light">Gasto</li>
+                              </ul>
+                              
+                        </div>
+                        <div class="col-md-4">
+                            <ul id="listaValor" class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent text-light">Valor</li>
+                              </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul id="listaBorrar" class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent text-light">.</li>
+                              </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!--Bootstrap-->
+    <script src="assets/Bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!--Js Local-->
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
