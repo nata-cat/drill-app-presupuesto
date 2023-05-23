@@ -29,6 +29,10 @@
     border: #69B7BF solid 1px;
 }
 
+#punto{
+    color: #3a949e;
+}
+
 .listaItems{
     background-color: #83828200;
 }
