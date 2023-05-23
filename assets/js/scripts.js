@@ -87,6 +87,7 @@ function enviarGasto(){
     let nombreIngresado = document.getElementById('nombreGasto').value;
     let valorGastoIngresado = document.getElementById('valorGasto').value;
     
+    //Se agregan los valores ingresados al arreglo con push
     arregloNombre.push(nombreIngresado);
     arregloCantidad.push(parseFloat(valorGastoIngresado));
 
@@ -109,7 +110,7 @@ function enviarGasto(){
     //contar en que posicion de la lista queda cada gasto
     let nombreIdentificado = laListaBorrar.childElementCount
 
-    console.log(laListaNombres.childElementCount);
+    //console.log(laListaNombres.childElementCount);
 
     //Identificamos el contenedor de las listas
     let itemsGastosNombres = document.createElement('li');
